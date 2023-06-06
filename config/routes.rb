@@ -1,5 +1,5 @@
 DemoRailsEngine::Engine.routes.draw do
     resources :orders
-    root "demos#index"
+    root "orders#index"
     get "demos/index" => "demos#index"
 end

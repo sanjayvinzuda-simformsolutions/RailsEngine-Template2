@@ -44,10 +44,10 @@ module DemoRailsEngine
       end
     end
 
-    def download_file
-      order = Order.find(params[:id])
-      file = order.file 
-      send_file file.path, filename: file.original_filename
+    def destroy
+      @order = Order.find(params[:id])
+      @order.destroy
+      redirect_to root_url
     end
     
     # DELETE /orders/1total_price
